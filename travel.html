@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Japan | Know Japan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/travel.css">
+    <script src="js/travel.js" defer></script>
+    <script src="js/theme.js" defer></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">知る日本 | Know Japan</div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <button class="dropdown-toggle">Language <span class="arrow">▼</span></button>
+                <div class="dropdown-menu">
+                    <a href="systems.html#hiragana">Hiragana</a>
+                    <a href="systems.html#katakana">Katakana</a>
+                    <a href="systems.html#kanji">Kanji</a>
+                </div>
+            </div>
+            <a href="culture.html" class="active">Culture</a>
+            <a href="food.html">Food</a>
+            <a href="travel.html">Travel</a>
+            <a href="history.html">History</a>
+        </div>
+    </nav>
+    <header class="travel-hero">
+        <h1>Explore Japan</h1>
+        <p>Discover iconic destinations across the country</p>
+        <div class="search-container">
+            <input type="text" id="locationSearch" placeholder="Search destinations...">
+            <select id="regionFilter">
+                <option value="all">All Regions</option>
+                <option value="kanto">Kanto</option>
+                <option value="kansai">Kansai</option>
+                <option value="hokkaido">Hokkaido</option>
+                <option value="kyushu">Kyushu</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="travel-content">
+        <div id="locationsGrid" class="locations-grid">
+        </div>
+    </main>
+</body>
+</html>

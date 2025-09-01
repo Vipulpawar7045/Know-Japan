@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Cuisine | Know Japan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">知る日本 | Know Japan</div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <button class="dropdown-toggle">Language <span class="arrow">▼</span></button>
+                <div class="dropdown-menu">
+                    <a href="systems.html#hiragana">Hiragana</a>
+                    <a href="systems.html#katakana">Katakana</a>
+                    <a href="systems.html#kanji">Kanji</a>
+                </div>
+            </div>
+            <a href="culture.html">Culture</a>
+            <a href="food.html" class="active">Food</a>
+            <a href="travel.html">Travel</a>
+
+<script>
+const recipes = [
+    {
+        name: 'Tonkatsu',
+        category: 'main',
+        description: 'Crispy breaded pork cutlet',
+        image: 'assets/food/tonkatsu.jpg',
+        videoUrl: 'https://youtu.be/VLnZ7tUNVEo?si=lKVQDKQIg0hg209G',
+        tags: ['Main Dish', 'Deep Fried']
+    },
+    {
+        name: 'Ramen',
+        category: 'noodles',
+        description: 'Japanese noodle soup with rich broth, meat, and veggies',
+        image: 'assets/food/ramen.webp',
+        videoUrl: 'https://youtu.be/aafmrrx7Bh4?si=V2rtjb25pwejbA59',
+        tags: ['Noodles', 'Soup', 'Main Dish']
+    },
+    {
+        name: 'Sushi Platter',
+        category: 'sushi',
+        description: 'Assorted sushi with fresh fish and vegetables',
+        image: 'assets/food/sushiplatter.jpg',
+        videoUrl: 'https://youtu.be/dR3QMxReUOQ?si=SVO7uOxsBTGYbcaN',
+        tags: ['Sushi', 'Seafood', 'Cold Dish']
+    },
+    {
+        name: 'Okonomiyaki',
+        category: 'main',
+        description: 'Japanese savory pancake with cabbage and toppings',
+        image: 'assets/food/okonomiyaki.jpg',
+        videoUrl: 'https://youtu.be/f2IEoi7Gu1U?si=tBLrMNRlLcsLVl5B',
+        tags: ['Main Dish', 'Savory Pancake', 'Street Food']
+    },
+    {
+        name: 'Mochi',
+        category: 'dessert',
+        description: 'Sweet glutinous rice cakes with red bean filling',
+        image: 'assets/food/mochi.jpg',
+        videoUrl: ' https://youtu.be/KRBg844vMfo?si=upDsEELu-H_CzDOV',
+        tags: ['Dessert', 'Sweet', 'Rice Cake']
+    },
+    {
+        name: 'Matcha Parfait',
+        category: 'dessert',
+        description: 'Layered dessert with matcha ice cream, jelly, and mochi',
+        image: 'assets/food/matcha.webp',
+        videoUrl: 'https://youtu.be/z_CWA7RB2ZA?si=D6lgcq4VuGpvozHx',
+        tags: ['Dessert', 'Matcha', 'Cold']
+    },
+    {
+        name: 'Yakisoba',
+        category: 'noodles',
+        description: 'Stir-fried noodles with vegetables and meat',
+        image: 'assets/food/yakisoba.jpg',
+        videoUrl: 'https://youtu.be/3a-NreKMgLo?si=Q7aINVRJ7LLTEkuH',
+        tags: ['Noodles', 'Main Dish', 'Stir Fried']
+    },
+    {
+        name: 'Nigiri Sushi',
+        category: 'sushi',
+        description: 'Hand-pressed rice with sliced fish on top',
+        image: 'assets/food/nigiri.jpg',
+        videoUrl: ' https://youtu.be/ki2bMjRvImU?si=cFBxpuZVJAsxZlJ2',
+        tags: ['Sushi', 'Seafood', 'Traditional']
+    },
+    {
+        name: 'Katsudon',
+        category: 'main',
+        description: 'Bowl of rice topped with tonkatsu, egg, and onions simmered in a sweet sauce',
+        image: 'assets/food/katsudon.jpg',
+        videoUrl: '   https://youtu.be/kV4Aw6MpoSU?si=m88HnhukSSEa8heM',
+        tags: ['Main Dish', 'Rice Bowl', 'Comfort Food']
+    },
+    {
+        name: 'Udon Noodles',
+        category: 'noodles',
+        description: 'Thick wheat noodles served in a light soy-based broth',
+        image: 'assets/food/udon.webp',
+        videoUrl: ' https://youtu.be/O8CUL_0eoNc?si=3hBnFRAC_eHssNhB',
+        tags: ['Noodles', 'Soup', 'Main Dish']
+    },
+    {
+        name: 'Dragon Roll',
+        category: 'sushi',
+        description: 'Sushi roll with eel, cucumber, and avocado arranged like a dragon',
+        image: 'assets/food/dragonroll.jpg',
+        videoUrl: 'https://youtu.be/L1THvfX5LTM?si=JzWcVuldADTiOx_F',
+        tags: ['Sushi', 'Creative', 'Seafood']
+    },
+    {
+        name: 'Dorayaki',
+        category: 'dessert',
+        description: 'Two fluffy pancakes filled with sweet red bean paste',
+        image: 'assets/food/dorayako.jpg',
+        videoUrl: 'https://youtu.be/ho9ZG1SJz-U?si=6rPHDahd7paN2J5x',
+        tags: ['Dessert', 'Sweet', 'Traditional']
+    }
+];
+
+function createRecipeCards() {
+    const grid = document.querySelector('.recipe-grid');
+    grid.innerHTML = ''; // Clear existing cards
+    recipes.forEach(recipe => {
+        grid.innerHTML += `
+            <div class="recipe-card" data-category="${recipe.category}">
+                <div class="recipe-thumbnail">
+                    <img src="${recipe.image}" alt="${recipe.name}">
+                    <div class="recipe-overlay">
+                        <a href="${recipe.videoUrl}" target="_blank" class="watch-btn">
+                            <i class="fab fa-youtube"></i> Watch Recipe
+                        </a>
+                    </div>
+                </div>
+                <div class="recipe-info">
+                    <h3>${recipe.name}</h3>
+                    <p>${recipe.description}</p>
+                    <div class="recipe-tags">
+                        ${recipe.tags.map(tag => `<span>${tag}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+}
+
+function filterRecipes(category) {
+    const cards = document.querySelectorAll('.recipe-card');
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    createRecipeCards();
+    
+    // Add click handlers for filter buttons
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            // Filter recipes
+            filterRecipes(button.dataset.category);
+        });
+    });
+});
+</script>
+            <a href="history.html">History</a>
+        </div>
+    </nav>
+
+    <header class="food-hero">
+        <h1>Japanese Cuisine</h1>
+        <p>Explore the art of Japanese cooking</p>
+    </header>
+
+    <main class="food-content">
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All Dishes</button>
+            <button class="filter-btn" data-category="main">Main Dishes</button>
+            <button class="filter-btn" data-category="noodles">Noodles</button>
+            <button class="filter-btn" data-category="sushi">Sushi</button>
+            <button class="filter-btn" data-category="dessert">Desserts</button>
+        </div>
+
+        <div class="recipe-grid">
+            <!-- Recipe Cards -->
+            <div class="recipe-card" data-category="main">
+                <div class="recipe-thumbnail">
+                    <img src="assets/images/food/tonkatsu.jpg" alt="Tonkatsu">
+                    <div class="recipe-overlay">
+                        <a href="https://youtu.be/watch?v=1H1V3OFZr0w" target="_blank" class="watch-btn">
+                            <i class="fab fa-youtube"></i> Watch Recipe
+                        </a>
+                    </div>
+                </div>
+                <div class="recipe-info">
+                    <h3>Tonkatsu</h3>
+                    <p>Crispy breaded pork cutlet</p>
+                    <div class="recipe-tags">
+                        <span>Main Dish</span>
+                        <span>Deep Fried</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

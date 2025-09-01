@@ -1,0 +1,290 @@
+.history-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(38, 0, 255, 0.6), rgba(5, 0, 36, 0.829)),
+                url('../images/history/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.animate-title {
+    font-size: 3.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpIn 1s ease forwards;
+}
+.era-content h3,
+.era-content p,
+.era-content li,
+.news-content .news-tags,
+.news-content h3,
+.news-content p,
+.news-content li,
+.data-card h3,
+.data-card p,
+.data-card li {
+    color: #000000 !important;
+}
+/* Timeline Section Styles */
+.timeline-section {
+    background: #f8f9fa;
+    color: #000;
+    padding: 4rem 0;
+}
+
+.timeline-container {
+    overflow-x: auto;
+    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
+.timeline-track {
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem;
+    min-width: max-content;
+}
+
+.era-scroll {
+    position: relative;
+    padding: 2rem 0;
+    margin: 2rem 0;
+}
+
+.era-container {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.era-container::-webkit-scrollbar {
+    display: none;
+}
+
+.era-card {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.era-card:hover {
+    transform: translateY(-10px);
+}
+
+.era-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.era-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.era-card:hover .era-image img {
+    transform: scale(1.1);
+}
+
+.era-years {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.era-content {
+    padding: 1.5rem;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.scroll-btn.left {
+    left: 1rem;
+}
+
+.scroll-btn.right {
+    right: 1rem;
+}
+
+.news-section {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-image {
+    height: 200px;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Add these styles for data visualization cards */
+.data-section {
+    background: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.data-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-card:hover {
+    transform: translateY(-5px);
+}
+
+.data-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.data-card h3 {
+    color: var(--text-color);
+    margin: 0;
+}
+
+.data-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.data-controls button {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.data-controls button:hover {
+    background: #f0f0f0;
+    color: var(--primary-color);
+}
+
+.data-card canvas {
+    flex-grow: 1;
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 768px) {
+    .animate-title {
+        font-size: 2.5rem;
+    }
+
+    .timeline-track {
+        padding: 0 1rem;
+    }
+
+    .era-card {
+        flex: 0 0 250px;
+    }
+
+    .era-image {
+        height: 160px;
+    }
+
+    .era-content {
+        padding: 1rem;
+    }
+
+    .era-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .scroll-btn {
+        display: none;
+    }
+
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .data-card {
+        height: 350px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script src="js/theme.js" defer></script>
+    <script src="js/writing-systems.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Writing Systems | Know Japan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/writing-systems.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="logo">知る日本 | Know Japan</div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <button class="dropdown-toggle">Language <span class="arrow">▼</span></button>
+                <div class="dropdown-menu">
+                    <a href="systems.html">Hiragana</a>
+                    <a href="systems.html">Katakana</a>
+                    <a href="systems.html">Kanji</a>
+                </div>
+            </div>
+            <a href="culture.html">Culture</a>
+            <a href="food.html">Food</a>
+            <a href="travel.html">Travel</a>
+            <a href="history.html">History</a>
+            <button class="theme-toggle">🌙</button>
+        </div>
+        <button class="mobile-menu-toggle">☰</button>
+    </nav>
+
+    <main class="writing-systems">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="hiragana">Hiragana</button>
+            <button class="tab-btn" data-tab="katakana">Katakana</button>
+            <button class="tab-btn" data-tab="kanji">Kanji</button>
+        </div>
+
+        <section id="hiragana" class="character-grid active">
+            <div class="grid-container">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="katakana" class="character-grid">
+            <div class="grid-container">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="kanji" class="character-grid">
+            <div class="grid-container">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,101 @@
+.culture-hero {
+    background: linear-gradient(rgba(0, 13, 255, 0.5), rgb(0, 0, 0)),
+                url('../images/culture-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.culture-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.culture-hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
+.culture-content {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.culture-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.culture-card:hover {
+    transform: translateY(-5px);
+}
+
+.culture-icon {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.culture-card h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.culture-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.culture-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.learn-more {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.learn-more:hover {
+    background: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .culture-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .culture-hero p {
+        font-size: 1.2rem;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+}

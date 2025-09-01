@@ -1,0 +1,55 @@
+/* Responsive styles for Know Japan website */
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    nav a {
+        margin: 0 0.5rem;
+        font-size: 1rem;
+    }
+    main h2 {
+        font-size: 1.5rem;
+    }
+    .topic-card {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 900px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    nav a {
+        margin: 0 1rem;
+        font-size: 1.2rem;
+    }
+    main h2 {
+        font-size: 2rem;
+    }
+    .topic-card {
+        flex: 1 1 calc(50% - 2rem);
+        margin: 1rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 901px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    nav a {
+        margin: 0 1.5rem;
+        font-size: 1.5rem;
+    }
+    main h2 {
+        font-size: 2.5rem;
+    }
+    .topic-card {
+        flex: 1 1 calc(20% - 2rem);
+        margin: 1rem;
+    }
+}
